@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+*{ 
+    margin: 0;
+    font-family: Poppins;
+    padding: 0;
+    outline: 0;
+    appearance: 0;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin-top: 50px;
+}
+
+/* Navigation bar */
+
+header{
+    top:0;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    z-index: 1;
+}
+
+nav #logo{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+nav .nav_links{
+    display: flex;
+}
+
+nav .nav_link{
+    margin-left: 1.5em
+}
+
+h3 span, h1 span{
+    color: gray;
+    font-weight: bold;
+}
+
+
+/* Main Section */
+
+main{
+    margin: 5px 5px 5px 5px;
+}
+
+/* Welcome Section */
+  section .welcome_section{
+    color: white;
+    font-weight: bold;
+    position: relative;
+    display: flex;
+    background-image: url(img/nordwood-themes-bJjsKbToY34-unsplash.jpg);
+    background-position: center;
+    background-size: 100%;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20vh;
+  }
+
+.welcome_section::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.welcome_section h1{
+    position: relative;
+}
+
+/* About us Section*/
+section .about_us{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, p,h4{
+    text-align: center;
+}
+
+/* Services Section */
+section .services_div{
+    display: flex;
+    justify-content: center;
+}
+
+.service{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    width: 300px;
+    padding-bottom: 40px;
+}
+
+.service img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.service .service_btn{
+    position: absolute;
+    bottom: 0px;
+    padding: 10px;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+
+}
+
+/* Contact Us */
+
+.form .form_image{
+    background-image: url(img/nordwood-themes-bJjsKbToY34-unsplash.jpg);
+    color: white;
+    position: relative;
+    font-weight: bold;
+    display: flex;
+    background-position: center;
+    background-size: 100%;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-grow: 1;
+    height: 50vh;
+}
+
+.form_image::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.form_image h1,h4{
+    position: relative;
+}
+
+
+.form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.form_details .name_email{
+    display: flex;
+    justify-content: center;
+
+}
+
+.form_details .name_email .item{
+    margin: 5px;
+    padding: 20px;
+    border: solid 1px rgb(128, 128, 128,0.2);
+    border-radius: 3px;
+    top: 0px;
+    bottom: 0px;
+}
+
+#submit_btn{
+    margin-top: 5px;
+    bottom: 0px;
+    padding: 10px;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+
+}
+
+.message{
+    display: flex;
+    justify-content: center;
+}
+#message{
+    border: solid 1px rgb(128, 128, 128,0.2);
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.google_map iframe {
+    max-width: 100%;
+    left: 0;
+    top: 0;
+}
+
+/* Footer */
+footer .footer_div{
+    height: 10vh;
+    font-size: small;
+    color: white;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 786px){
+    section .services_div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form .form_image{
+        width: 100%;
+    }
+
+    
+}
