@@ -116,7 +116,7 @@ section .services_div{
     flex-direction: column;
     align-items: center;
     margin: 10px;
-    width: 300px;
+    width: 100%;
     padding-bottom: 40px;
 }
 
@@ -137,75 +137,44 @@ section .services_div{
 
 /* Contact Us */
 
-.form .form_image{
-    background-image: url(img/nordwood-themes-bJjsKbToY34-unsplash.jpg);
-    color: white;
-    position: relative;
-    font-weight: bold;
+.form_details{
+    border-radius: 5px;
+    background-color: teal;
+    box-shadow: var(--box-shadow);
     display: flex;
-    background-position: center;
-    background-size: 100%;
-    align-items: center;
-    justify-content: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    flex-grow: 1;
-    height: 50vh;
-}
-
-
-.form{
-    display: flex;
-    flex-direction: row;
     justify-content: space-around;
 }
 
-.form_details .name_email{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
-}
-
-.form_details{
+form{
+    width: 50%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 10px;
+    padding: 5px;
 }
 
-.form_details .name_email .item{
-    margin: 5px;
-    padding: 20px;
-    border: solid 1px rgb(128, 128, 128,0.2);
-    border-radius: 3px;
-    top: 0px;
-    bottom: 0px;
-}
-
-#submit_btn{
-    margin-top: 30px;
-    bottom: 0px;
+form input{
     padding: 10px;
-    color: white;
-    background-color: black;
     border-radius: 5px;
-
+    border: none;
 }
 
-.message{
-    display: flex;
-    justify-content: center;
-}
-#message{
-    border: solid 1px rgb(128, 128, 128,0.2);
-    padding: 20px;
-    margin-top: 20px;
+form textarea{
+    border-radius: 5px;
     width: 100%;
     height: 100%;
+    resize: none;
+}
+
+form input[type="submit"]{
+    background-color: black;
+    color: white;
 }
 
 
-
+.google_map{
+    margin: 10px;
+}
 .google_map iframe {
     max-width: 100%;
     left: 0;
@@ -217,7 +186,7 @@ footer .footer_div{
     height: 10vh;
     font-size: small;
     color: white;
-    background-color: gray;
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -233,15 +202,10 @@ footer .footer_div{
         align-items: center;
     }
 
-    .form{
+    .form_details{
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
-    .form .form_image{
-        width: 100%;
-    }
-
     
 }
