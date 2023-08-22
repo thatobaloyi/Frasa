@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 
+:root{
+    --box-shadow: 0.3em 0.3em 0.3em rgb(0, 0, 0,0.1);
+}
+
 *{ 
     margin: 0;
     font-family: Poppins;
@@ -107,7 +111,7 @@ section .services_div{
 .service{
     position: relative;
     border-radius: 5px;
-    box-shadow: 0.3em 0.3em 0.3em rgb(0, 0, 0,0.1);
+    box-shadow: var(--box-shadow);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -147,20 +151,6 @@ section .services_div{
     background-size: cover;
     flex-grow: 1;
     height: 50vh;
-}
-
-.form_image::before{
-    content: "";
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    background-color: rgba(0,0,0,0.5);
-}
-
-.form_image h1,h4{
-    position: relative;
 }
 
 
