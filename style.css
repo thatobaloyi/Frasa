@@ -201,6 +201,18 @@ section .services_div{
     margin-bottom: 2em;
 }
 
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 800ms ease;
+}
+
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
 
 .service .service_btn{
     position: absolute;

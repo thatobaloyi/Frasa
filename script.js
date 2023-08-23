@@ -19,6 +19,7 @@ function myFunction(){
     }
 }
 
+// navigation menu
 menuOpen.addEventListener('click', () => {
     let div = document.querySelector(".nav_menu")
     div.classList.toggle("trans")
@@ -36,4 +37,19 @@ const closeMenu = () =>{
 menuClose.addEventListener('click', closeMenu)
 
 
+// services reveal
+window.addEventListener('scroll', () =>{
+    var reveal = document.querySelectorAll('.reveal')
+
+    for(var i = 0; i < reveal.length; i++){
+        var windowheight = window.innerHeight
+        var revtop = reveal[i].getBoundingClientRect().top
+
+        if(revtop < windowheight){
+            reveal[i].classList.add('active')
+        }else{
+            reveal[i].classList.remove('active')
+        }
+    }
+})
 
