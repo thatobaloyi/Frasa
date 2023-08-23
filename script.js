@@ -11,24 +11,24 @@ function myFunction(){
     if(window.innerWidth < 1024){
         menuOpen.style.display = 'inline-block'
         menuClose.style.display = 'none'
-        menu.style.display = 'none'
     }
 
     if(window.innerWidth > 1024){
         menuOpen.style.display = 'none'
         menuClose.style.display = 'none'
-        menu.style.display = 'flex'
     }
 }
 
 menuOpen.addEventListener('click', () => {
-    menu.style.display = 'flex'
+    let div = document.querySelector(".nav_menu")
+    div.classList.toggle("trans")
     menuClose.style.display = 'inline-block'
     menuOpen.style.display = 'none'
 })
 
 const closeMenu = () =>{
-    menu.style.display = 'none'
+    let div = document.querySelector(".nav_menu")
+    div.classList.toggle("trans")
     menuClose.style.display = 'none'
     menuOpen.style.display = 'inline-block'
 }
