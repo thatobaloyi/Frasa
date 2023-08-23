@@ -96,21 +96,10 @@ nav{
     transition: 400ms ease;
 }
 
-nav button{
+.menu_open, .menu_close{
     display: none;
 }
 
-.menu_open{
-    transition: 400ms ease;
-}
-
-.menu_close{
-    transition: 400ms ease;
-}
-
-.nav_menu{
-    transition: 400ms ease;
-}
 
 .win_scroll{
     background-color: white;
@@ -121,6 +110,11 @@ nav button{
     align-items: center;
     justify-content: space-between;
     margin: 10px;
+
+}
+
+nav .menu_open, .menu_close{
+    background-color: transparent;
 }
 
 .nav_container ul{
@@ -323,8 +317,8 @@ footer a{
 
     .nav_container ul{
         width: 15em;
-        position: fixed;
         display: none;
+        position: fixed;
         flex-direction: column;
         background-color: white;
         color: black;
@@ -335,12 +329,7 @@ footer a{
     .nav_menu{
         border-radius: var(--border-radius);
     }
-
-    nav .menu_open{
-        height: 100%;
-        background-color: transparent;
-        display: inline-block;
-    }
+    
 
     .nav_menu li{
         width: 100%;
