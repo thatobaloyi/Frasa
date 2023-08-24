@@ -44,7 +44,7 @@
     --flat_color5: #77a6f7;
 
     /* More variables */
-    --box-shadow: 0.3em 0.3em 0.3em rgb(0, 0, 0,0.1);
+    --box-shadow: 0.3em 0.3em 2em rgb(0, 0, 0,0.1);
     --border-radius: 5px;
 
 }
@@ -89,11 +89,13 @@ ul{
 
 nav{
     top:0;
+    height: 50px;
     position: fixed;
     width: 100%;
     background-color: transparent;
     z-index: 1;
     transition: 400ms ease;
+    background-color: white;
 }
 
 .menu_open, .menu_close{
@@ -101,26 +103,34 @@ nav{
 }
 
 
-.win_scroll{
-    background-color: white;
-}
-
 .nav_container{
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 10px;
-
 }
 
 nav .menu_open, .menu_close{
     background-color: transparent;
 }
 
+
+
+nav a{
+    padding-left: 10px;
+    transition: 400ms ease;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+
 .nav_container ul{
+    font-weight: bold;
+    height: 100%;
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 5px;
 }
 
 h3 span, h1 span{
@@ -187,7 +197,8 @@ section .services_div{
 .service{
     position: relative;
     height: fit-content;
-    border-radius: 5px;
+    border-radius: 10px;
+    border: none;
     box-shadow: var(--box-shadow);
     display: flex;
     flex-direction: column;
@@ -198,14 +209,16 @@ section .services_div{
 }
 
 .service p{
+    padding-left: 10px;
+    padding-right: 10px;
     margin-bottom: 2em;
 }
 
 .reveal{
     position: relative;
-    transform: translateY(150px);
+    transform: translateY(100px);
     opacity: 0;
-    transition: 800ms ease;
+    transition: 250ms ease;
 }
 
 .reveal.active{
@@ -321,6 +334,26 @@ footer a{
 
 @media screen and (max-width: 1024px){
 
+    .nav_menu li{
+        height: 3em;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav_menu a{
+        background-color: white;
+        border-radius: 5px;
+    }
+
+    .nav_menu a:hover{
+        background-color: transparent;
+        cursor: pointer;
+        color: white;
+    }
+    
+
     section .services_div{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -331,7 +364,7 @@ footer a{
         width: 15em;
         position: fixed;
         flex-direction: column;
-        background-color: white;
+        font-weight: bold;
         color: black;
         top: 3.5em;
         right: -300px;
@@ -344,23 +377,13 @@ footer a{
 
     .trans{
         transform: translateX(-310px);
+        opacity: 0.95;
     }
 
     .menu_open{
         display: block;
     }
     
-    .nav_menu li{
-        width: 100%;
-        height: 3em;
-    }
-
-    .nav_menu li a{
-        width: 100%;
-        height: 100%;
-        display: grid;
-        place-items: center;
-    }
 
 
     .form_details{
@@ -379,6 +402,7 @@ footer a{
 }
 
 @media screen and (max-width: 600px){
+
     section .services_div{
         display: grid;
         grid-template-columns: 1fr;
@@ -405,4 +429,23 @@ footer a{
         align-items: center;
     }
 
+}
+
+/* Hover */
+.service:hover{
+    box-shadow: none;
+    background-color: rgb(0, 0, 0, 0.8);
+    color: white;
+}
+
+.service:hover button{
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+
+
+.nav_menu a:hover{
+    background-color: black;
+    color: white;
 }
