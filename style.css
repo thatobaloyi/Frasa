@@ -337,6 +337,7 @@ footer a{
     padding: 20px;
     display: flex;
     gap: 30px;
+    justify-content: center;
     height: fit-content;
     width: 100%;
     background-color: black;
@@ -371,9 +372,8 @@ footer a{
 
 
 
-.faq_expand_btn, .faq_close_btn{
+.question_icon{
     align-self: flex-start;
-    background-color: transparent;
 }
 
 .questions{
@@ -390,6 +390,12 @@ footer a{
     .questions{
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .question{
+        display: flex;
+        justify-content: center;
+    }
+
     .nav_menu li{
         height: 3em;
         width: 100%;
@@ -470,6 +476,15 @@ footer a{
         display: grid;
         grid-template-columns: 1fr;
         
+    }
+
+    .question{
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer_logo h4{
+        text-align: center;
     }
 
     .form_details{

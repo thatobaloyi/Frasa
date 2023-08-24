@@ -78,5 +78,13 @@ questions.forEach(question =>{
     question.addEventListener('click', () =>{
         question.classList.toggle('open')
 
+        const icon = question.querySelector('.question_icon i')
+
+        if(icon.className == 'uil uil-angle-down'){
+            icon.className = 'uil uil-angle-up'
+        }else{
+            icon.className = 'uil uil-angle-down'
+        }
+
     })
 })
