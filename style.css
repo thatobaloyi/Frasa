@@ -218,7 +218,7 @@ section .services_div{
     position: relative;
     transform: translateY(100px);
     opacity: 0;
-    transition: 250ms ease;
+    transition: 1000ms ease;
 }
 
 .reveal.active{
